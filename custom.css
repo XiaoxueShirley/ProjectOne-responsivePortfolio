@@ -1,0 +1,149 @@
+
+body {
+  max-width: 1000px;
+  margin: 100px auto;
+  line-height: 24px;
+  font: 16px Verdana, Sans-Serif;
+  background: linear-gradient(287deg, #DCDCDC, #696969);
+  background-size: 400% 400%;
+  font-family: 'Source Code Pro', monospace;
+
+  -webkit-animation: BlackWhite 8s ease infinite;
+  -moz-animation: BlackWhite 8s ease infinite;
+  animation: BlackWhite 8s ease infinite;
+}
+
+@-webkit-keyframes BlackWhite {
+    0%{background-position:0% 60%}
+    50%{background-position:100% 40%}
+    100%{background-position:0% 60%}
+}
+@-moz-keyframes BlackWhite {
+    0%{background-position:0% 60%}
+    50%{background-position:100% 40%}
+    100%{background-position:0% 61%}
+}
+@keyframes BlackWhite {
+    0%{background-position:0% 60%}
+    50%{background-position:100% 40%}
+    100%{background-position:0% 60%}
+}
+
+/* # is used to target div with custom id  */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.column {
+  padding: 20px;
+}
+
+/* a column class which also has an additional class side */
+.column.side {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.column.wide{
+  -webkit-flex: 8;
+  -ms-flex: 8;
+  flex: 8;
+}
+
+.bgTransition {
+  background-image: linear-gradient(60deg, LavenderBlush, Lavender);
+  background-repeat: no-repeat;
+  background-size: auto;
+  transition: transform 2s;
+}
+
+.bgTransition:hover {
+  background-image: linear-gradient(60deg, Lavender, LavenderBlush);
+  transform: translate(5px, 5px);
+  z-index: 1;
+}
+
+.spin {
+  margin-right: 20px;
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#page-wrap {
+  width: 800px;
+  margin: 40px auto 60px;
+  /*reserve some empty space around content*/
+}
+
+#pic {
+  float: right;
+  margin: -40px 0 0 0;
+  /*top right botton left*/
+}
+
+h1 {
+  color: rgb(243, 33, 255);
+  /*red green blue*/
+  margin: 0 0 16px 0;
+  padding: 0 0 18px 0;
+  font-size: 42px;
+  font-size: bold;
+  letter-spacing: -2px;
+  border-bottom: 1px solid #999;
+}
+
+a {
+  color: rgb(61, 95, 232);
+  border-bottom: 1px bottom;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom-style: solid;
+  color: Fuchsia;
+}
+
+ul {
+  margin: 0 0 32px 17px;
+}
+
+li {
+  color: rgb(54, 60, 79);
+}
+
+/* when viewport of device becomes 600px or less */
+@media (max-width: 600px) {
+
+  /*change flex direction to column*/
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  img {
+    display: none;
+  }
+
+  #title {
+    text-align: center;
+  }
+}
